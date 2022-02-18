@@ -26,8 +26,8 @@ function pesquisar(){
 
 /* Dados advindo da API do MercadoLivre*/
 async function getData(termo) {
-    const promisse = fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${termo}`);
-    promisse.then((response) => // função anônima para receptar o sucesso do request
+    const promise = fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${termo}`);
+    promise.then((response) => // função anônima para receptar o sucesso do request
         response.json()) // extração do JSON da resposta, o qual retorna outra promisse
         .then((jsonData) => { // função anônima para receptar a resposta assíncrona do JSON com os dados dos produtos
             console.log(jsonData.results)
