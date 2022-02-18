@@ -37,7 +37,7 @@ async function getData(termo) {
         })
         .catch((response) => // função anônima para receptar o erro do request
             alert(`Nada encontrado. Erro ${response}`))
-        .finally(() => { // função anônima para limpar a mensagem de 'loading', após a requisição ser resolvida
+        .finally(() => {
         
         });
 
