@@ -1,0 +1,223 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,button,input{
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+/* algumas variáveis */
+:root{
+    --bgColor: #e4e4e4;
+    --primary: #4d74a7;
+    --secondary: #fd9621;
+    --textColor: #020213;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbcacf;
+    padding: 16px;
+}
+h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #192c46;
+}
+p{
+    margin-bottom: 10px;
+    text-align: center;
+}
+#paginate{
+    width: 100%;
+    margin: 32px auto;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    #paginate .searchBar{
+        outline: 0;
+        float: left;
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+
+    #paginate .searchBar > #textbox {
+        outline: 0;
+        height: 42px;
+        width: 244px;
+        line-height: 42px;
+        padding: 0 16px;
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #212121;
+        border: 0;
+        float: left;
+        -webkit-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+    }
+
+    #paginate .searchBar > #textbox:focus {
+        outline: 0;
+        background-color: #FFF;
+    }  
+
+    #paginate .searchBar > .button {
+        outline: 0;
+        background: none;
+        background-color: rgba(38, 50, 56, 0.8);
+        float: left;
+        height: 42px;
+        width: 42px;
+        text-align: center;
+        line-height: 42px;
+        border: 0;
+        color: #FFF;
+        font-size: 16px;
+        text-rendering: auto;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        -webkit-transition: background-color .4s ease;
+        transition: background-color .4s ease;
+        -webkit-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+    }
+
+    #paginate .searchBar > .button:hover {
+        background-color: rgba(0, 150, 136, 0.8);
+    }
+
+    #paginate .searchBar svg{
+        fill: white;
+        padding: 5px;
+    }
+
+    #paginate .list{
+        border: 1px solid ;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 700px;
+    }
+
+    #paginate .list .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-basis: 200px;
+        margin: 10px;
+        border: 1px solid #d1d1d1;
+        background-color: #ebebeb;
+    }
+
+    #paginate .list .item:hover{
+        border: 1px solid #ffffff;
+        transform: translateY(-3px);
+    }
+
+    #paginate .list .item .itemThumb{
+
+    }
+
+    #paginate .list .item .itemTitle{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.2em;
+        padding: 0 5px;
+        padding-top: 10px;
+    }
+
+    #paginate .list .item .itemPrice{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.7em;
+        color: green;
+        padding: 0 5px;
+        padding-top: 5px;
+    }
+
+    #paginate .pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8px;
+    }
+    #paginate .pagination div{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    #paginate .pagination div:not(.numbers),
+    #paginate .pagination div.numbers div{
+        width: 40px;
+        height: 40px;
+    }
+    #paginate .pagination .number:hover{
+        color: var(--primary);
+        background-color: #ffffff;
+    }
+    #paginate .pagination .selected{
+        background-color: #c5c2c7;
+        color: #919191;
+    }
+
+
+
+footer{
+    margin-top: 80px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cbcacf;
+}
+
+.rodape{
+    width: 1000px;
+}
+
+@media (max-width: 800px) {
+    #paginate .list{
+        width: 95vw;
+    }
+    #paginate .list .item{
+        flex-basis: 242px;
+        flex-grow: 1;
+    }
+    #paginate .pagination div{
+        font-size: 14px;
+    }
+    #paginate .pagination div:not(.numbers),
+    #paginate .pagination div.numbers div{
+        width: 30px;
+        height: 30px;
+    }
+    footer{
+        font-size: 14px;
+    }
+    h1{
+        text-align: center;
+    }
+}

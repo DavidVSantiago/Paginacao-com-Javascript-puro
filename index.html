@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Paginação</title>
+</head>
+
+<body>
+    <header>
+        <h1>Paginação com Javascript puro</h1>
+        <br>
+        <p>A pesquisa retorna dados via JSON da API do MercadoLivre</p>
+    </header>
+
+    <section id="paginate">
+
+        <div class="searchBar">
+            <input type="text" id="textbox" placeholder="Digite o nome do produto">
+            <button title="Search" value="" type="submit" class="button" onclick="pesquisar()">
+                <svg class="search-icon" viewBox="0 0 28 28">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </button>
+        </div>
+        <div class="list">
+
+        </div>
+        <div class="pagination">
+            <div class="first">&#171</div>
+            <div class="prev">&lt</div>
+            <div class="numbers">
+                <div>1</div>
+            </div>
+            <div class="next">&gt</div>
+            <div class="last">&#187</div>
+        </div>
+    </section>
+    <footer>
+        <div class="rodape">
+            <p>Este é um exemplo de paginação crua, utilizando apenas Javascript. Sem uso de JQuery ou qualquer outra
+                framework.</p>
+            <p>Este exemplo faz parte do Portfólio pesssoal de <a href="https://linktr.ee/david.santiago"
+                    target="_blank">David Santiago.</a></p>
+            <p>Acesse o código completo <a href="#">neste repositório.</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
