@@ -17,12 +17,14 @@ function getElement(element) {
 // **********************************************************
 // **********************************************************
 
+/* função executada ao clicar no btn de pesquisa*/
 function pesquisar(){
     const termo = document.getElementById('textbox').value
-    getData(termo)
-    init()
+    getData(termo) // busca os dados na API do MercadoLivre
+    init() // atualiza a e tela e refaz a paginação
 }
 
+/* Dados advindo da API do MercadoLivre*/
 async function getData(termo) {
     const promisse = fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${termo}`);
     promisse.then((response) => // função anônima para receptar o sucesso do request
@@ -40,8 +42,6 @@ async function getData(termo) {
         });
 
 }
-
-/* Dados advindo da API rest*/
 
 
 // **********************************************************
